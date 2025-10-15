@@ -88,11 +88,14 @@ Main and additional analyses performed include:
 
 ### 5️⃣ Visualize
 Visualization was performed using **Matplotlib** and **Seaborn**, with graphs such as:
-- **Bar Chart** → Comparison between categories and countries
-  
-- **Line Chart** → Seasonal revenue trends  
-- **Heatmap** → Correlation between financial variables  
-- **Scatter Plot** → Relationship between price and quantity  
+- **Bar Chart** → Comparison between categories and countries    
+  Top 10 Revenue and profit.png
+- **Line Chart** → Seasonal revenue trends        
+  Sales-Data-Analysis-Google-Data-Analytics-Capstone/ Monthly Revenue Trend.png  
+- **Heatmap** → Correlation between financial variables    
+  Sales-Data-Analysis-Google-Data-Analytics-Capstone/ Correlation.png  
+- **Scatter Plot** → Relationship between price and quantity    
+  Sales-Data-Analysis-Google-Data-Analytics-Capstone/ Effectivity Price.png  
 
 Examples of visualization results:
 - Correlation between financial variables  
@@ -119,8 +122,7 @@ The results can be used to:
 - Plan inventory and campaigns based on seasonal patterns.  
 
 ---
-
-
-
-
-Translated with DeepL.com (free version)
+## 🧑‍💻 Pembuat     
+**Ardiansyah Ihsan Prakoso**     
+📧 ihsanprakoso25@gmail.com     
+💼 Data Analyst | Data Enthusiast    
