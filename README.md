@@ -1,128 +1,126 @@
 # 🧾 Sales Data Analysis Project
 
-Proyek ini merupakan hasil eksplorasi dan analisis data penjualan menggunakan **Python** dengan memanfaatkan dataset `Sales.csv`. Analisis dilakukan untuk memahami pola penjualan, profitabilitas produk, tren musiman, serta hubungan antar variabel keuangan. Proyek ini juga mengikuti tahapan kerja analitik yang diajarkan dalam **Google Data Analytics Course**.
+This project is the result of exploring and analyzing sales data using **Python** by utilizing the `Sales.csv` dataset. The analysis was conducted to understand sales patterns, product profitability, seasonal trends, and the relationship between financial variables. This project also follows the analytical work stages taught in the **Google Data Analytics Course**.
 
 ## 📂 Dataset  
 
-Dataset yang digunakan bernama **Europe Bike Store Sales** dan berasal dari **Kaggle**.  
-Dataset ini berisi data transaksi penjualan yang mencakup informasi seperti tanggal pemesanan, kategori produk, jumlah barang yang dibeli, harga satuan, total pendapatan (revenue), dan keuntungan (profit).  
-Data ini merepresentasikan aktivitas penjualan dari beberapa kategori produk utama, yaitu **Bikes**, **Clothing**, dan **Accessories**.  
-Setiap baris dalam dataset menunjukkan satu transaksi penjualan, yang dapat digunakan untuk menganalisis performa bisnis, efisiensi harga, serta tren musiman penjualan.
+The dataset used is called **Europe Bike Store Sales** and comes from **Kaggle**.  
+This dataset contains sales transaction data that includes information such as order date, product category, number of items purchased, unit price, total revenue, and profit.  
+This data represents sales activities from several main product categories, namely **Bikes**, **Clothing**, and **Accessories**.  
+Each row in the dataset represents one sales transaction, which can be used to analyze business performance, price efficiency, and seasonal sales trends.
 
 ---
 
-## 📁 Struktur Proyek
-├── Sales.csv # Dataset penjualan utama
-├── analysis.ipynb # Notebook utama berisi proses analisis & visualisasi
-└── README.md # Dokumentasi proyek
+## 📁 Project Structure
+├── Sales.csv # Main sales dataset    
+├── analysis.ipynb # Main notebook containing analysis & visualization processes    
+└── README.md # Project documentation
 
 
 ---
 
-## 🧰 Teknologi yang Digunakan
+## 🧰 Technologies Used
 - **Python 3.x**
-- **Pandas** → pengolahan dan analisis data  
-- **Matplotlib** & **Seaborn** → visualisasi data  
+- **Pandas** → data processing and analysis  
+- **Matplotlib** & **Seaborn** → data visualization  
 
 ---
 
-## 📊 Alur Pengerjaan Proyek
+## 📊 Project Workflow
 
-Proyek ini disusun mengikuti tahapan analisis data profesional, yaitu:
+This project is structured according to professional data analysis stages, namely:
 
 ### 1️⃣ Asking
-Menentukan pertanyaan utama yang ingin dijawab melalui data:
-- Negara atau wilayah mana yang menghasilkan revenue tertinggi?
-- Produk apa yang paling menguntungkan?
-- Apakah ada pola musiman dalam penjualan?
-- Bagaimana hubungan antara harga, jumlah pesanan, dan profit?
+Determine the main questions to be answered through data:
+- Which countries or regions generate the highest revenue?
+- Which products are the most profitable?
+- Are there seasonal patterns in sales?
+- What is the relationship between price, order quantity, and profit?
 
 ---
 
 ### 2️⃣ Prepare
-Menyiapkan dataset `Sales.csv` untuk analisis:
-- Menghapus data kosong (jika ada)  
-- Mengubah kolom tanggal ke format `datetime`  
-- Membuat kolom tambahan seperti `Year`, `Month`, dan `Profit_Margin`  
+Prepare the `Sales.csv` dataset for analysis:
+- Remove empty data (if any)  
+- Convert the date column to `datetime` format  
+- Create additional columns such as `Year`, `Month`, and `Profit_Margin`  
 
 ---
 
 ### 3️⃣ Process
-Menggunakan *pandas* untuk transformasi dan perhitungan:
-- `groupby()` untuk agregasi berdasarkan negara, produk, dan waktu  
-- Menghitung metrik seperti `Revenue`, `Profit`, dan `Profit_Margin`  
-- Menyusun data untuk visualisasi tren dan distribusi  
+Use *pandas* for transformation and calculation:
+- `groupby()` for aggregation by country, product, and time  
+- Calculate metrics such as `Revenue`, `Profit`, and `Profit_Margin`
+- Organize data for visualization of trends and distribution
 
 ---
 
 ### 4️⃣ Analyze
-Analisis utama dan tambahan dilakukan meliputi:
+Main and additional analyses performed include:
 
-#### 🔹 Analisis Utama
-- **Top 10 Negara berdasarkan Revenue & Profit**  
-  → Mengidentifikasi wilayah dengan kontribusi penjualan terbesar.  
-- **Distribusi Revenue berdasarkan Kategori Produk**  
-  → Mengetahui kategori produk yang mendominasi penjualan.  
-- **Tren Revenue Tahunan**  
-  → Melihat pertumbuhan dan fluktuasi penjualan antar tahun.  
-- **Perbandingan Revenue berdasarkan Gender & Age Group**  
-  → Analisis segmentasi pelanggan.  
+#### 🔹 Main Analysis
+1. **Top 10 Countries by Revenue & Profit**  
+  → Identifying regions with the largest sales contributions.  
+2. **Revenue Distribution by Product Category**  
+  → Identifying the product categories that dominate sales.  
+3. **Annual Revenue Trends**  
+  → Examining sales growth and fluctuations between years.  
+4. **Revenue Comparison by Gender & Age Group**  
+  → Analyzing customer segmentation.
 
-#### 🔹 Analisis Tambahan
-1. **Korelasi Antar Variabel Keuangan**  
-   Menunjukkan hubungan antara *Revenue*, *Profit*, *Cost*, dan *Order Quantity*.  
-   Hasil: hubungan sangat kuat antara *Revenue* dan *Profit*, sementara *Order Quantity* memiliki korelasi negatif ringan.
+5. **Correlation Between Financial Variables**  
+   Shows the relationship between *Revenue*, *Profit*, *Cost*, and *Order Quantity*.  
+   Results: a very strong relationship between *Revenue* and *Profit*, while *Order Quantity* has a slight negative correlation.
 
-2. **Analisis Musiman Penjualan (Revenue per Bulan)**  
-   Menggambarkan pola penjualan rata-rata per bulan.  
-   Hasil: penjualan meningkat tajam menjelang pertengahan dan akhir tahun, menunjukkan pola musiman yang kuat.
+6. **Seasonal Sales Analysis (Revenue per Month)**  
+   Describes the average monthly sales pattern.  
+   Results: sales increase sharply towards the middle and end of the year, indicating a strong seasonal pattern.
 
-3. **Profit Margin per Kategori Produk**  
-   Mengukur efisiensi keuntungan per kategori.  
-   Hasil: kategori *Accessories* memiliki margin tertinggi (~57%), diikuti *Bikes* (~33%) dan *Clothing* (~31%).
+7. **Profit Margin per Product Category**  
+   Measures profit efficiency per category.  
+   Results: the *Accessories* category has the highest margin (~57%), followed by *Bikes* (~33%) and *Clothing* (~31%).
 
-4. **Efektivitas Harga terhadap Kuantitas Terjual**  
-   Menggambarkan hubungan harga satuan dan volume penjualan.  
-   Hasil: korelasi negatif — semakin tinggi harga, semakin rendah jumlah produk yang dibeli.
+8. **Effectiveness of Price on Quantity Sold**  
+   Illustrates the relationship between unit price and sales volume.  
+   Results: negative correlation — the higher the price, the lower the number of products purchased.
 
 ---
 
 ### 5️⃣ Visualize
-Visualisasi dilakukan menggunakan **Matplotlib** dan **Seaborn**, dengan grafik seperti:
-- **Bar Chart** → Perbandingan antar kategori dan negara  
-- **Line Chart** → Tren musiman revenue  
-- **Heatmap** → Korelasi antar variabel keuangan  
-- **Scatter Plot** → Hubungan harga dan kuantitas  
+Visualization was performed using **Matplotlib** and **Seaborn**, with graphs such as:
+- **Bar Chart** → Comparison between categories and countries
+  
+- **Line Chart** → Seasonal revenue trends  
+- **Heatmap** → Correlation between financial variables  
+- **Scatter Plot** → Relationship between price and quantity  
 
-Contoh hasil visualisasi:
-- Korelasi antar variabel keuangan  
-- Analisis musiman penjualan  
-- Profit margin per kategori  
-- Efektivitas harga terhadap kuantitas
+Examples of visualization results:
+- Correlation between financial variables  
+- Seasonal sales analysis  
+- Profit margin per category  
+- Effectiveness of price on quantity
 
 ---
 
 ### 6️⃣ Share
-**Insight utama dari hasil analisis:**
-- Revenue tinggi umumnya diikuti profit besar, tapi perlu kontrol cost untuk efisiensi.  
-- Produk *Accessories* paling menguntungkan dan efisien secara margin.  
-- Pola musiman menunjukkan puncak penjualan pertengahan dan akhir tahun.  
-- Harga berpengaruh negatif terhadap kuantitas — perlu strategi harga yang tepat untuk menjaga volume penjualan.  
+**Key insights from the analysis results:**
+- High revenue is generally followed by large profits, but cost control is necessary for efficiency.  
+- *Accessories* products are the most profitable and efficient in terms of margin.  
+- Seasonal patterns show peak sales in the middle and end of the year.  
+- Price has a negative impact on quantity — an appropriate pricing strategy is needed to maintain sales volume.  
 
 ---
 
-## 💡 Kesimpulan
-Analisis ini memberikan gambaran komprehensif tentang kinerja penjualan berdasarkan data aktual.  
-Hasilnya dapat digunakan untuk:
-- Menentukan strategi harga dan promosi.  
-- Memfokuskan penjualan pada produk ber-margin tinggi.  
-- Merencanakan stok dan kampanye berdasarkan pola musiman.  
+## 💡 Conclusion
+This analysis provides a comprehensive overview of sales performance based on actual data.  
+The results can be used to:
+- Determine pricing and promotion strategies.  
+- Focus sales on high-margin products.  
+- Plan inventory and campaigns based on seasonal patterns.  
 
 ---
 
-## 🧑‍💻 Pembuat
-**Ardiansyah Ihsan Prakoso**  
-📧 ihsanprakoso25@gmail.com 
-💼 Data Analyst | Data Enthusiast  
 
----
+
+
+Translated with DeepL.com (free version)
